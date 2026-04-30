@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Shipping Production Software with Claude Code</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css" id="theme">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/monokai.css">
+  <style>
+    .reveal { font-size: 34px; }
+    .reveal h1, .reveal h2, .reveal h3 { text-transform: none; letter-spacing: -0.5px; }
+    .reveal h1 { font-size: 2em; }
+    .reveal h2 { font-size: 1.5em; color: #ff9f1c; }
+    .reveal h3 { font-size: 1.1em; color: #2ec4b6; }
+    .reveal pre { font-size: 0.5em; box-shadow: none; }
+    .reveal pre code { padding: 12px 16px; max-height: 720px; border-radius: 6px; }
+    .reveal code { color: #ff9f1c; }
+    .reveal table { font-size: 0.65em; }
+    .reveal table th { color: #2ec4b6; }
+    .reveal blockquote { border-left: 4px solid #ff9f1c; background: rgba(255,159,28,0.08); }
+    .reveal section img { border: none; box-shadow: none; }
+    .reveal .small { font-size: 0.7em; }
+    .reveal .muted { color: #888; }
+    .reveal ul, .reveal ol { width: 100%; }
+    .reveal li { margin: 0.15em 0; }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section data-markdown="slides/00-title.md" data-separator="^---$" data-separator-vertical="^--$" data-separator-notes="^Note:"></section>
+      <section data-markdown="slides/01-what-is-vibe-coding.md" data-separator="^---$" data-separator-vertical="^--$" data-separator-notes="^Note:"></section>
+      <section data-markdown="slides/02-bare-minimum-skills.md" data-separator="^---$" data-separator-vertical="^--$" data-separator-notes="^Note:"></section>
+      <section data-markdown="slides/03-workspace-setup.md" data-separator="^---$" data-separator-vertical="^--$" data-separator-notes="^Note:"></section>
+      <section data-markdown="slides/04-claude-code-basics.md" data-separator="^---$" data-separator-vertical="^--$" data-separator-notes="^Note:"></section>
+      <section data-markdown="slides/05-the-spec-protocol.md" data-separator="^---$" data-separator-vertical="^--$" data-separator-notes="^Note:"></section>
+      <section data-markdown="slides/06-features.md" data-separator="^---$" data-separator-vertical="^--$" data-separator-notes="^Note:"></section>
+      <section data-markdown="slides/07-bugs.md" data-separator="^---$" data-separator-vertical="^--$" data-separator-notes="^Note:"></section>
+      <section data-markdown="slides/08-commits-and-prs.md" data-separator="^---$" data-separator-vertical="^--$" data-separator-notes="^Note:"></section>
+      <section data-markdown="slides/09-understanding-issues.md" data-separator="^---$" data-separator-vertical="^--$" data-separator-notes="^Note:"></section>
+      <section data-markdown="slides/10-audits-and-reports.md" data-separator="^---$" data-separator-vertical="^--$" data-separator-notes="^Note:"></section>
+      <section data-markdown="slides/11-documentation.md" data-separator="^---$" data-separator-vertical="^--$" data-separator-notes="^Note:"></section>
+      <section data-markdown="slides/12-daily-workflow.md" data-separator="^---$" data-separator-vertical="^--$" data-separator-notes="^Note:"></section>
+      <section data-markdown="slides/13-cheatsheet.md" data-separator="^---$" data-separator-vertical="^--$" data-separator-notes="^Note:"></section>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/markdown/markdown.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/highlight.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/notes/notes.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/search/search.js"></script>
+  <script>
+    Reveal.initialize({
+      width: 1280,
+      height: 900,
+      margin: 0.04,
+      hash: true,
+      slideNumber: 'c/t',
+      controls: true,
+      progress: true,
+      history: true,
+      transition: 'slide',
+      plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealSearch ]
+    });
+  </script>
+</body>
+</html>
