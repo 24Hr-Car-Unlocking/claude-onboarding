@@ -2,7 +2,7 @@
 
 Convention is everything. Following it makes your history readable, your release notes generate themselves, and your PR descriptions write themselves.
 
----
+----
 
 ## Conventional Commits
 
@@ -23,7 +23,7 @@ test(SPEC-042): add edge case tests for empty input
 chore: bump axios to 1.7.4
 ```
 
----
+----
 
 ## Branch naming
 
@@ -39,7 +39,7 @@ chore: bump axios to 1.7.4
 
 Examples: `feature/customer-history`, `bug/empty-vin-crash`, `hotfix/twilio-timeout`, `chore/bump-deps-2026-04`.
 
----
+----
 
 ## The "atomic commit" rule
 
@@ -59,7 +59,7 @@ docs(SPEC-042): document customer history endpoint
 
 If you can describe what changed in a single sentence without the word "and", it's atomic.
 
----
+----
 
 ## The commit prompt
 
@@ -81,7 +81,7 @@ Proposed message:
 
 You read both. If good → "yes commit". If not → push back with specifics.
 
----
+----
 
 ## The PR prompt
 
@@ -99,7 +99,7 @@ You: Open a PR for this branch.
 
 Claude runs `gh pr create` with the drafted title and body. You review, then "ready for review" when satisfied.
 
----
+----
 
 ## PR review etiquette
 

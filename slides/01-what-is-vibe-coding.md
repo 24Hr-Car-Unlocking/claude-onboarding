@@ -13,7 +13,7 @@ Output quality depends entirely on the **protocol** you follow — not on how cl
 Note:
 Most people who fail at vibe coding fail because they treat Claude like a magic genie. They give vague prompts, accept vague output, and ship vague software. The fix isn't a better LLM. The fix is a better process.
 
----
+----
 
 ## The two failure modes
 
@@ -23,7 +23,7 @@ Most people who fail at vibe coding fail because they treat Claude like a magic 
 ### ❌ Helicopter mode
 You micromanage every line of code → you might as well have written it yourself → no leverage, no speed, no point.
 
----
+----
 
 ## The shape of *legitimate* vibe coding
 
@@ -38,7 +38,7 @@ You micromanage every line of code → you might as well have written it yoursel
 
 This is the same loop senior engineers use. The only difference is *who types the code*.
 
----
+----
 
 ## The non-negotiables
 

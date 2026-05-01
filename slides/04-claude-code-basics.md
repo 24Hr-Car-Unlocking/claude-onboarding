@@ -2,7 +2,7 @@
 
 A 5-minute tour of the buttons and modes that matter.
 
----
+----
 
 ## Starting a session
 
@@ -24,7 +24,7 @@ Or just open the desktop app and pick the working directory.
 Note:
 Always launch from the directory you want Claude to see. Launching from your home folder gives Claude no codebase to work with.
 
----
+----
 
 ## The four permission modes
 
@@ -39,7 +39,7 @@ Toggle with **Shift+Tab** (cycles through them) or via the menu.
 
 **Default rule:** start in plan mode, drop to default once the plan is approved. Almost never use bypass.
 
----
+----
 
 ## Plan mode is your superpower
 
@@ -56,7 +56,7 @@ You read the plan, push back, refine. Once you're happy, Claude exits plan mode 
 Note:
 Plan mode is the seatbelt of vibe coding. It's the difference between "Claude rewrote half my codebase while I was getting coffee" and "Claude executed exactly what we agreed on."
 
----
+----
 
 ## Slash commands you'll use weekly
 
@@ -70,7 +70,7 @@ Plan mode is the seatbelt of vibe coding. It's the difference between "Claude re
 
 Type `/` in Claude to see the full list. Many more come from plugins.
 
----
+----
 
 ## CLAUDE.md — the standing instructions
 
@@ -84,7 +84,7 @@ Anything you'd otherwise repeat — "always read the agent brief first", "never 
 
 Update CLAUDE.md whenever you catch yourself giving the same instruction twice.
 
----
+----
 
 ## The "ask before committing" rule
 

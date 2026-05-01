@@ -13,7 +13,7 @@ The single behavior change that separates production code from slop:
 Note:
 A spec is a 1-2 page document that answers: what are we building, why, what does "done" look like, and what are the edge cases. It takes 15-30 minutes to write and saves hours of bad implementation.
 
----
+----
 
 ## The loop
 
@@ -25,7 +25,7 @@ SPEC  →  PLAN MODE  →  IMPLEMENTATION  →  REVIEW  →  PR  →  MERGE  →
 
 Every piece of work that isn't a typo or dependency bump runs through this loop.
 
----
+----
 
 ## Where specs live
 
@@ -44,7 +44,7 @@ Templates to copy from `phoenix-docs/templates/`:
 
 > ADRs go in `specs/adrs/` and are **never** archived or deleted.
 
----
+----
 
 ## The canonical spec format
 
@@ -82,7 +82,7 @@ affected_repos: [phoenix]
 
 Don't create multi-file spec folders. One spec = one file.
 
----
+----
 
 ## Spec status lifecycle
 
@@ -99,7 +99,7 @@ Update the `status` field in the frontmatter as work progresses.
 
 > ⚠️ **Critical:** "Complete" means deployed. Not merged. Not "code is done." **Deployed.** Use `review-pending` when the PR is open.
 
----
+----
 
 ## Letting Claude help write the spec
 

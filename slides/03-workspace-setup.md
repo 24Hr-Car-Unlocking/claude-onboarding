@@ -15,7 +15,7 @@ D:\repos\phoenix-workspace\
 Note:
 This sibling layout is critical. Claude can see across all repos when launched from the workspace root, which is essential for cross-repo work.
 
----
+----
 
 ## Cloning the repos
 
@@ -32,7 +32,7 @@ git clone https://github.com/24Hr-Car-Unlocking/technician-app
 
 Already cloned? Just `git pull` inside each one to update.
 
----
+----
 
 ## Meet `phoenix-docs` — the brain of the operation
 
@@ -58,7 +58,7 @@ The Phoenix Platform per the dev-standards doc = 4 core repos (phoenix, phoenix-
 Note:
 Every workflow in this deck flows through phoenix-docs. Specs are written there, ADRs live there, agent briefs sit there. Treat this repo as the operating manual for the whole platform.
 
----
+----
 
 ## Per-repo `CLAUDE.md` files
 
@@ -79,7 +79,7 @@ claude
 
 The `/init` slash command makes Claude scan the repo and draft a `CLAUDE.md`. **Review it before committing** — never blindly accept generated docs.
 
----
+----
 
 ## Workspace-level `CLAUDE.md`
 

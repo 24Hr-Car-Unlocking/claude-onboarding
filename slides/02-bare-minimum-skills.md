@@ -9,7 +9,7 @@ The next slides cover everything you need. Nothing more.
 Note:
 Skip none of these. Each one will be invoked in the daily workflow. The good news: you're not learning to *write* code, only to *direct* it. That dramatically shrinks the surface area.
 
----
+----
 
 ## Skill 1 — The terminal
 
@@ -31,7 +31,7 @@ cd D:/repos/phoenix-workspace   # jump anywhere by absolute path
 Note:
 On Windows, install Git for Windows from git-scm.com. It bundles Git Bash. To open it, right-click any folder in File Explorer and pick "Git Bash Here". That single trick saves you 80% of the typing.
 
----
+----
 
 ## Skill 2 — Git, the absolute basics
 
@@ -49,7 +49,7 @@ git log --oneline -20         # see recent commits
 
 That is genuinely 90% of what you'll type. Claude will run most of these for you — but you need to *recognize* them when they happen.
 
----
+----
 
 ## Skill 3 — GitHub
 
@@ -66,7 +66,7 @@ GitHub hosts your repos online. Three concepts to know:
 Note:
 Even when you're the only person on the team, treat PRs as the contract. They force a moment of "do I really want to ship this?" Claude will draft the PR title and body for you. You click "merge".
 
----
+----
 
 ## Skill 4 — Reading a diff
 
@@ -89,7 +89,7 @@ When reviewing Claude's work, read every diff. Look for:
 - Files changed that shouldn't have been → push back
 - Hardcoded secrets, API keys, passwords → **stop immediately**
 
----
+----
 
 ## Skill 5 — VS Code
 
@@ -105,7 +105,7 @@ Open a repo with `code D:/repos/phoenix-workspace/phoenix` from any terminal.
 
 The integrated terminal (Ctrl+`) is your friend — runs Git Bash and Claude Code right in the editor.
 
----
+----
 
 ## Skill 6 — Claude Code
 
@@ -127,7 +127,7 @@ Both connect to the same Claude. Pick whichever feels right that day.
 Note:
 If you're new, default to the desktop app for the first week. The CLI is faster once your muscle memory builds, but the desktop app gives you visual confirmation of every tool call which is reassuring early on.
 
----
+----
 
 ## Skill 7 — The "working directory" concept
 

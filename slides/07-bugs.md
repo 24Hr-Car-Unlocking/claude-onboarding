@@ -2,7 +2,7 @@
 
 Same protocol as features, with one critical twist: **failing test first, fix second.**
 
----
+----
 
 ## Step 1 — Write the bug spec
 
@@ -22,7 +22,7 @@ The bug template forces you to fill in:
 
 Severity goes in the frontmatter. P0 means production is down. P3 means cosmetic.
 
----
+----
 
 ## Step 2 — Prompt Claude
 
@@ -43,7 +43,7 @@ Fix SPEC-051: Empty VIN crashes unlock flow.
 - Do not commit or push without asking
 ```
 
----
+----
 
 ## Step 3 — The bug-fix checklist
 
@@ -60,7 +60,7 @@ The bug template ends with this checklist. Don't skip any item:
 Note:
 If you found a null-check missing in one place, there are usually 2-3 more places with the same gap. Always have Claude grep the codebase for sibling cases after the test passes.
 
----
+----
 
 ## Step 4 — Branch & commit naming
 
@@ -81,7 +81,7 @@ fix(SPEC-051): handle empty VIN in unlock flow
 
 PR title: same as commit.
 
----
+----
 
 ## Step 5 — Root cause section
 

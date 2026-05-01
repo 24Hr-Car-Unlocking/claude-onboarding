@@ -2,7 +2,7 @@
 
 Three tiers of docs, three different audiences, three different update cadences.
 
----
+----
 
 ## The four tiers
 
@@ -15,7 +15,7 @@ Three tiers of docs, three different audiences, three different update cadences.
 
 Plus: each repo has its own `CLAUDE.md` for repo-specific rules (commands, file structure, conventions).
 
----
+----
 
 ## Tier 1 — Agent briefs
 
@@ -36,7 +36,7 @@ From the template:
 
 > Agent briefs do **not** include: commands, project structure, env vars, testing. Those go in the repo's own `CLAUDE.md`.
 
----
+----
 
 ## Tier 2 — Repo docs
 
@@ -46,7 +46,7 @@ From the template:
 
 Currently exists in `phoenix-docs/documentation/repos/` for: `phoenix-ui`, `phoenix`, `technician-app`. To be extended.
 
----
+----
 
 ## Tier 3 — Guides
 
@@ -60,7 +60,7 @@ Currently exists:
 
 Add new guides as system-wide topics emerge (testing strategy, auth flows, etc.). Don't pre-create them — write the guide when the practice solidifies.
 
----
+----
 
 ## Tier 4 — Backend deep-dives
 
@@ -72,7 +72,7 @@ Add new guides as system-wide topics emerge (testing strategy, auth flows, etc.)
 
 These get long and technical. They're for when a guide isn't deep enough.
 
----
+----
 
 ## The "review against code" prompt
 
@@ -93,7 +93,7 @@ report I can use to drive an update.
 
 Run this monthly per major doc.
 
----
+----
 
 ## The "update after this PR" pattern
 

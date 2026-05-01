@@ -2,7 +2,7 @@
 
 Before you write any spec, use Claude as a **codebase cartographer** and **rubber duck**. Read-only, no edits, just understanding.
 
----
+----
 
 ## The "explain it to me" pattern
 
@@ -17,7 +17,7 @@ in order. Do not edit anything.
 
 Claude returns a written walkthrough. You ask follow-ups. By the end, you understand the system well enough to write a spec for it.
 
----
+----
 
 ## The "trace this" pattern
 
@@ -32,7 +32,7 @@ order, with a one-line summary of what each does.
 
 Output: a numbered list of file paths with explanations. Save it as a markdown note for future reference.
 
----
+----
 
 ## The "what are my options" pattern
 
@@ -54,7 +54,7 @@ Do not implement anything.
 
 This is your input for an **ADR** if the decision is permanent.
 
----
+----
 
 ## ADRs — Architecture Decision Records
 
@@ -78,7 +78,7 @@ ADRs are **permanent** — never archived, never deleted, only superseded.
 Note:
 3 months from now you'll forget why you picked WebSockets over Server-Sent Events. The ADR is your future self's lifeline. Even a 1-page ADR beats the best memory.
 
----
+----
 
 ## The rubber-duck pattern
 

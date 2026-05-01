@@ -2,7 +2,7 @@
 
 Print this slide. Pin this slide.
 
----
+----
 
 ## Branch prefixes
 
@@ -20,7 +20,7 @@ Format: `type(SPEC-NNN): description`
 
 > "Complete" means **deployed to production**, not "code is done."
 
----
+----
 
 ## The 5 prompts you'll use most
 
@@ -56,7 +56,7 @@ Stop. That approach won't work because [reason]. Instead,
 [alternative approach].
 ```
 
----
+----
 
 ## Things you must NEVER let Claude do without asking
 
@@ -71,7 +71,7 @@ Stop. That approach won't work because [reason]. Instead,
 
 If in doubt, **ask Claude to show you what it's about to do, before it does it.**
 
----
+----
 
 ## Where things live in `phoenix-docs`
 
@@ -90,7 +90,7 @@ phoenix-docs/
     └── backend/            ← Phoenix API flows & feature deep-dives
 ```
 
----
+----
 
 ## The protocol in 7 lines
 
@@ -102,7 +102,7 @@ phoenix-docs/
 6. **Review every diff** — no exceptions
 7. **`complete` means deployed** — `review-pending` until then
 
----
+----
 
 ## Final word
 

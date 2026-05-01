@@ -2,7 +2,7 @@
 
 The end-to-end loop, from idea to merged PR.
 
----
+----
 
 ## Step 1 — Write the spec
 
@@ -24,7 +24,7 @@ git commit -m "docs(SPEC-042): add customer history spec"
 git push
 ```
 
----
+----
 
 ## Step 2 — Create a feature branch in the right repo
 
@@ -39,7 +39,7 @@ Branch naming: `feature/short-description` — slash required, lowercase with da
 
 > Reminder: Claude does **not** create branches. You do. Claude verifies it's on the right branch before making changes.
 
----
+----
 
 ## Step 3 — Prompt Claude (the canonical pattern)
 
@@ -63,7 +63,7 @@ Read these files first:
 - Use plan mode first; show me the plan before implementing
 ```
 
----
+----
 
 ## Step 4 — The TDD prompt (when test infrastructure exists)
 
@@ -79,7 +79,7 @@ Claude reorders the work into **RED → GREEN → REFACTOR** cycles:
 - **GREEN** — minimal code to make it pass
 - **REFACTOR** — clean up while tests stay green
 
----
+----
 
 ## Step 5 — Implement, review, commit per chunk
 
@@ -95,7 +95,7 @@ For each step in the plan:
 
 Don't batch 10 steps before reviewing. Review after each one.
 
----
+----
 
 ## Step 6 — Update spec status as you go
 
@@ -116,7 +116,7 @@ status: complete
 
 > Never skip `review-pending`. "Complete" is reserved for deployed code.
 
----
+----
 
 ## Step 7 — Open the PR
 

@@ -13,7 +13,7 @@ Built for **Robert Ramirez** & the 24Hr Car Unlocking team
 Note:
 This deck distills a battle-tested protocol used to ship production code with AI agents. The goal isn't to make you a software engineer. The goal is to make you the *director* of one — a director with enough taste, vocabulary, and process discipline to ship code your customers can rely on.
 
----
+----
 
 ## What you'll leave with
 
@@ -23,7 +23,7 @@ This deck distills a battle-tested protocol used to ship production code with AI
 - Prompt templates you can paste into Claude on day one
 - A daily workflow you can run on autopilot
 
----
+----
 
 ## How to use this deck
 
