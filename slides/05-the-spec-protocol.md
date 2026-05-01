@@ -103,22 +103,18 @@ Update the `status` field in the frontmatter as work progresses.
 
 ## Letting Claude help write the spec
 
-You don't have to write specs from scratch. Two-step pattern:
+You don't have to write specs from scratch. Pattern:
 
 ```
-You: I want to add [rough description] to phoenix-ui. Read 
-     phoenix-docs/templates/feature-template.md and 
-     phoenix-docs/documentation/agents/phoenix-ui.md, then 
-     ask me 5-8 clarifying questions before drafting a spec.
+I want to add [rough description] to phoenix-ui. 
+Read phoenix-docs/templates/feature-template.md and 
+phoenix-docs/documentation/agents/phoenix-ui.md.
 
-Claude: [asks questions]
-
-You: [answers]
-
-Claude: [drafts a spec to phoenix-docs/specs/active/SPEC-NNN-...]
-
-You: [edit, push back, ship it]
+Ask me 5-8 clarifying questions, then draft a spec 
+to phoenix-docs/specs/active/SPEC-NNN-name.md.
 ```
+
+Claude asks → you answer → Claude drafts → you edit and ship.
 
 Note:
 The clarifying-questions step is essential. Without it, Claude fills in plausible-but-wrong assumptions and you get a spec that's confidently incorrect. Always force the question round.
