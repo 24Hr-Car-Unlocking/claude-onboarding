@@ -36,19 +36,24 @@ Already cloned? Just `git pull` inside each one to update.
 
 ## Meet `phoenix-docs` — the brain of the operation
 
-`phoenix-docs` is **not** documentation for the `phoenix` web app. It is the **central docs repo for every project in the workspace.**
+`phoenix-docs` is **not** documentation for the `phoenix` web app. It is the **central docs repo for every project in the workspace** — the home of **Document Driven Development (DDD)**.
 
 | Folder | What lives there |
 |--------|------------------|
 | `templates/` | Canonical templates — feature, bug, ADR, agent-brief. Never modify. |
-| `specs/plans/` | Active feature & bug specs (`SPEC-XXX-name.md`) |
-| `specs/adrs/` | Architecture Decision Records (permanent) |
+| `specs/active/` | In-flight specs (`SPEC-NNN-name.md`) — features, bugs, audits |
+| `specs/plans/` | Long-horizon multi-phase plans |
+| `specs/adrs/` | Architecture Decision Records (permanent — never deleted) |
+| `documentation/development-standards.md` | "How We Work" — the source of truth for conventions |
 | `documentation/agents/` | Cross-repo briefs Claude reads first |
 | `documentation/repos/` | Detailed human-facing docs per repo |
-| `documentation/guides/` | System-wide topics (testing, deployment, auth) |
-| `archive/` | Completed / deprecated specs |
+| `documentation/guides/` | System-wide topics (system-overview, devops) |
+| `documentation/backend/` | Phoenix API deep-dives — `flows/` and `features/` |
 
-> Currently `documentation/repos/` covers `phoenix-ui`, `phoenix`, and `technician-app`. The other repos will be added over time.
+> Currently `documentation/repos/` and `documentation/agents/` cover `phoenix-ui`, `phoenix`, and `technician-app`. Coverage will extend to the other repos over time.
+
+Note:
+The Phoenix Platform per the dev-standards doc = 4 core repos (phoenix, phoenix-ui, technician-app, phoenix-docs). phoenix-press and customer-app are auxiliary. You'll do most of your work in the 4 core repos.
 
 Note:
 Every workflow in this deck flows through phoenix-docs. Specs are written there, ADRs live there, agent briefs sit there. Treat this repo as the operating manual for the whole platform.
@@ -81,7 +86,7 @@ The `/init` slash command makes Claude scan the repo and draft a `CLAUDE.md`. **
 There's also a `CLAUDE.md` at `D:\repos\phoenix-workspace\` that covers cross-repo behavior. Claude reads this whenever you launch from the workspace root.
 
 Use it to encode rules like:
-- "Always check `phoenix-docs/specs/plans/` for an active spec before writing code"
+- "Always check `phoenix-docs/specs/active/` for an active spec before writing code"
 - "Always read the agent brief in `phoenix-docs/documentation/agents/` first"
 - "Never commit without asking"
 

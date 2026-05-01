@@ -50,7 +50,7 @@ Read these in order, then confirm you're ready:
 1. phoenix-docs/documentation/development-standards.md
 2. phoenix-docs/documentation/agents/phoenix-ui.md
 3. phoenix-ui/CLAUDE.md
-4. phoenix-docs/specs/plans/SPEC-042-customer-history.md
+4. phoenix-docs/specs/active/SPEC-042-customer-history.md
 ```
 
 Claude reads, confirms. Now you're aligned on the rules and the work.
@@ -118,10 +118,7 @@ If the reviewer (you, a teammate, or another agent) requests changes:
 - Squash merge the PR
 - Watch the deploy
 - Once it's running in production: spec status → `complete`
-- After 2-4 weeks stable: archive the spec
-  ```bash
-  mv phoenix-docs/specs/plans/SPEC-042-*.md phoenix-docs/archive/
-  ```
+- The completed spec stays in `specs/active/` as a permanent record. Phoenix doesn't archive — the YAML status field is the source of truth.
 
 ---
 

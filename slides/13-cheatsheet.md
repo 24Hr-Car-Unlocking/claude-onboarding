@@ -6,13 +6,13 @@ Print this slide. Pin this slide.
 
 ## Branch prefixes
 
-`feature/` · `bug/` · `hotfix/` · `chore/` · `docs/` · `refactor/`
+`feature/` · `bug/` · `hotfix/` · `chore/` · `docs/`
 
 ## Commit types
 
 `feat` · `fix` · `docs` · `refactor` · `test` · `chore`
 
-Format: `type(SPEC-XXX): description`
+Format: `type(SPEC-NNN): description`
 
 ## Spec status flow
 
@@ -33,9 +33,9 @@ Confirm when ready.
 
 **Implement a spec:**
 ```
-Implement phoenix-docs/specs/plans/SPEC-XXX.md. Read the 
-agent brief first. Follow TDD. Plan mode first. Do not 
-commit without asking.
+Implement phoenix-docs/specs/active/SPEC-NNN.md. Read the 
+agent brief first. Plan mode first. Do not commit without 
+asking.
 ```
 
 **Get a plan:**
@@ -77,16 +77,17 @@ If in doubt, **ask Claude to show you what it's about to do, before it does it.*
 
 ```
 phoenix-docs/
-├── templates/          ← copy from here
+├── templates/              ← copy from here
 ├── specs/
-│   ├── plans/          ← active feature & bug specs
-│   ├── adrs/           ← permanent architecture decisions
-│   └── audits/         ← dated audit reports
-├── documentation/
-│   ├── agents/         ← cross-repo briefs (Claude reads these)
-│   ├── repos/          ← detailed human-facing repo docs
-│   └── guides/         ← system-wide topics
-└── archive/            ← completed/deprecated specs
+│   ├── active/             ← in-flight specs (features, bugs, audits)
+│   ├── plans/              ← long-horizon multi-phase plans
+│   └── adrs/               ← permanent architecture decisions
+└── documentation/
+    ├── development-standards.md  ← "How We Work"
+    ├── agents/             ← cross-repo briefs Claude reads first
+    ├── repos/              ← detailed human-facing repo docs
+    ├── guides/             ← system-overview, devops
+    └── backend/            ← Phoenix API flows & feature deep-dives
 ```
 
 ---

@@ -4,13 +4,14 @@ Three tiers of docs, three different audiences, three different update cadences.
 
 ---
 
-## The three tiers
+## The four tiers
 
 | Tier | Location | Audience | When updated |
 |------|----------|----------|--------------|
 | **Agent briefs** | `phoenix-docs/documentation/agents/*.md` | Claude (cross-repo work) | When inter-service contracts change |
 | **Repo docs** | `phoenix-docs/documentation/repos/*.md` | Humans onboarding | When architecture or commands change |
 | **Guides** | `phoenix-docs/documentation/guides/*.md` | Everyone (system-wide topics) | When a system-wide practice changes |
+| **Backend deep-dives** | `phoenix-docs/documentation/backend/{flows,features}/` | Devs working in Phoenix API | When a flow or feature changes shape |
 
 Plus: each repo has its own `CLAUDE.md` for repo-specific rules (commands, file structure, conventions).
 
@@ -53,14 +54,23 @@ Currently exists in `phoenix-docs/documentation/repos/` for: `phoenix-ui`, `phoe
 **Length:** Medium.
 **Content:** System-wide topics that span repos.
 
-Common guides to write over time:
-- `system-overview.md` — how the 6 repos fit together
-- `local-development.md` — environment setup
-- `testing.md` — testing strategy by layer
-- `authentication.md` — auth flows
-- `deployment.md` — deploy process
-- `database-migrations.md` — migration workflow
-- `troubleshooting.md` — common issues
+Currently exists:
+- `system-overview.md` — architecture and how repos connect
+- `devops.md` — CI/CD, migrations, local dev, troubleshooting
+
+Add new guides as system-wide topics emerge (testing strategy, auth flows, etc.). Don't pre-create them — write the guide when the practice solidifies.
+
+---
+
+## Tier 4 — Backend deep-dives
+
+**Audience:** Devs working specifically in `phoenix` (the API).
+**Location:** `phoenix-docs/documentation/backend/`
+
+- `flows/` — architectural flow diagrams (request lifecycles, integration sequences)
+- `features/` — feature deep-dives (Twilio integration, dispatch logic, payments)
+
+These get long and technical. They're for when a guide isn't deep enough.
 
 ---
 

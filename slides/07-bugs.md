@@ -8,7 +8,7 @@ Same protocol as features, with one critical twist: **failing test first, fix se
 
 ```bash
 cd D:/repos/phoenix-workspace/phoenix-docs
-cp templates/bug-template.md specs/plans/SPEC-051-empty-vin-crash.md
+cp templates/bug-template.md specs/active/SPEC-051-empty-vin-crash.md
 ```
 
 The bug template forces you to fill in:
@@ -32,12 +32,12 @@ Fix SPEC-051: Empty VIN crashes unlock flow.
 
 ## Context
 1. phoenix-docs/documentation/agents/phoenix.md
-2. phoenix-docs/specs/plans/SPEC-051-empty-vin-crash.md
+2. phoenix-docs/specs/active/SPEC-051-empty-vin-crash.md
 
 ## Rules
-- Write a failing test that reproduces the bug FIRST
-- Then implement the fix
-- Verify the test passes
+- If test infrastructure exists in this repo: write a failing 
+  test that reproduces the bug FIRST, then fix
+- Otherwise: reproduce the bug manually, fix, verify manually
 - Then check for similar patterns elsewhere in the codebase
 - Update documentation if behavior changed
 - Do not commit or push without asking
@@ -49,9 +49,9 @@ Fix SPEC-051: Empty VIN crashes unlock flow.
 
 The bug template ends with this checklist. Don't skip any item:
 
-- [ ] Write failing test that reproduces the bug
+- [ ] Reproduce the bug (test if test infra exists, manually otherwise)
 - [ ] Implement fix
-- [ ] Verify test passes
+- [ ] Verify the fix
 - [ ] **Check for similar patterns elsewhere in codebase**
 - [ ] Update documentation if behavior changed
 

@@ -35,8 +35,7 @@ chore: bump axios to 1.7.4
 | `bug/` | Bug fixes |
 | `hotfix/` | Urgent production fixes |
 | `chore/` | Maintenance, dependencies |
-| `docs/` | Documentation updates |
-| `refactor/` | Internal cleanup, no behavior change |
+| `docs/` | Documentation-only updates |
 
 Examples: `feature/customer-history`, `bug/empty-vin-crash`, `hotfix/twilio-timeout`, `chore/bump-deps-2026-04`.
 

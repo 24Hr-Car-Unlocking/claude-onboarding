@@ -1,9 +1,14 @@
-# The Spec-First Protocol
+# Document Driven Development (DDD)
 
-The single behavior change that separates production code from slop.
+The Phoenix Platform's name for the spec-first protocol.
 
-> **Never let Claude write code without a written spec.**
-> Either you write it, or Claude writes a draft and you approve it.
+> *"Documentation is the **first** artifact of every change, not an afterthought. Specs are written before code, reviewed like code, and archived for reference."*
+> — `phoenix-docs/documentation/development-standards.md`
+
+The single behavior change that separates production code from slop:
+
+> **Never let Claude write code without an active spec.**
+> Either you write it, or Claude drafts it and you approve it.
 
 Note:
 A spec is a 1-2 page document that answers: what are we building, why, what does "done" look like, and what are the edge cases. It takes 15-30 minutes to write and saves hours of bad implementation.
@@ -13,63 +18,86 @@ A spec is a 1-2 page document that answers: what are we building, why, what does
 ## The loop
 
 ```
-SPEC  →  PLAN MODE  →  TDD IMPLEMENTATION  →  REVIEW  →  PR  →  MERGE
-  ↑                                                                   │
-  └─────── update status as work progresses ─────────────────────────┘
+SPEC  →  PLAN MODE  →  IMPLEMENTATION  →  REVIEW  →  PR  →  MERGE  →  DEPLOY
+  ↑                                                                        │
+  └─────── update status as work progresses ──────────────────────────────┘
 ```
 
-Every piece of work that isn't a typo fix runs through this loop.
+Every piece of work that isn't a typo or dependency bump runs through this loop.
 
 ---
 
 ## Where specs live
 
-In `phoenix-docs/specs/plans/` — never in the code repo itself.
+In `phoenix-docs/specs/active/` — never in the code repo itself.
 
-Naming: `SPEC-XXX-short-name.md` where XXX is a 3-digit number you increment manually (e.g. `SPEC-001-customer-vehicle-history.md`).
+Naming: `SPEC-NNN-short-name.md` where NNN is a 3-digit number you increment manually (e.g. `SPEC-001-twilio-spend-audit.md`).
 
 Templates to copy from `phoenix-docs/templates/`:
 
 | Template | When to use |
 |----------|-------------|
-| `feature-template.md` | New feature, new endpoint, new screen |
+| `feature-template.md` | New feature, new endpoint, new screen, **or audit** |
 | `bug-template.md` | Something is broken |
 | `adr-template.md` | A permanent architecture decision |
 | `agent-brief-template.md` | Setting up a new repo |
+
+> ADRs go in `specs/adrs/` and are **never** archived or deleted.
+
+---
+
+## The canonical spec format
+
+Every spec is a **single `.md` file** with YAML frontmatter and four canonical H2 sections:
+
+```markdown
+---
+id: SPEC-NNN
+title: "Short descriptive title"
+status: draft
+created: YYYY-MM-DD
+author: "Your Name"
+reviewers: []
+affected_repos: [phoenix]
+---
+
+# SPEC-NNN — Title
+
+## Overview
+[2-3 sentences: what problem, why now, what happens if we don't]
+
+## Requirements
+### Must have
+### Nice to have
+### Non-goals
+
+## Design
+[Technical approach: DB changes, endpoints, UI changes,
+ cross-repo impact, edge cases]
+
+## Tasks
+- [ ] First atomic task
+- [ ] Second atomic task
+```
+
+Don't create multi-file spec folders. One spec = one file.
 
 ---
 
 ## Spec status lifecycle
 
-Update the `status:` field in the spec's frontmatter as work progresses.
+Update the `status` field in the frontmatter as work progresses.
 
 | Status | Meaning |
 |--------|---------|
 | `draft` | Being written, not ready for implementation |
-| `ready` | Spec complete, ready for implementation |
-| `in-progress` | Currently being implemented or revised |
-| `review-pending` | Code complete, tests passing, PR open |
-| `complete` | PR merged to main and **running in production** |
-| `deprecated` | No longer pursuing |
+| `ready` | Spec complete, ready to implement |
+| `in-progress` | Currently being implemented |
+| `review-pending` | Code complete, PR awaiting review |
+| `complete` | PR merged **and deployed to production** |
+| `deprecated` | No longer pursuing or superseded |
 
 > ⚠️ **Critical:** "Complete" means deployed. Not merged. Not "code is done." **Deployed.** Use `review-pending` when the PR is open.
-
----
-
-## What a good spec looks like
-
-A feature spec from `feature-template.md` has:
-
-- **Problem** — 2-3 sentences. What user pain? Why now?
-- **Requirements** — `WHEN [trigger], the system SHALL [behavior]`
-- **Non-goals** — what this explicitly does NOT do *(prevents Claude from gold-plating)*
-- **Design** — data model, API, UI, cross-repo impact
-- **Edge cases** — empty input? invalid input? service unavailable? concurrent requests?
-- **Error handling** — table of error codes → user-facing messages
-- **Acceptance criteria** — testable, with inputs and expected outputs
-- **Constraints** — must integrate with X, cannot modify Y
-
-The non-goals section is the secret weapon. It's what stops Claude from "helpfully" rewriting your auth system because you asked it to add a button.
 
 ---
 
@@ -87,7 +115,7 @@ Claude: [asks questions]
 
 You: [answers]
 
-Claude: [writes a draft spec to phoenix-docs/specs/plans/SPEC-042-...]
+Claude: [drafts a spec to phoenix-docs/specs/active/SPEC-NNN-...]
 
 You: [edit, push back, ship it]
 ```

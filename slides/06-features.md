@@ -8,18 +8,18 @@ The end-to-end loop, from idea to merged PR.
 
 ```bash
 cd D:/repos/phoenix-workspace/phoenix-docs
-cp templates/feature-template.md specs/plans/SPEC-042-customer-history.md
-code specs/plans/SPEC-042-customer-history.md
+cp templates/feature-template.md specs/active/SPEC-042-customer-history.md
+code specs/active/SPEC-042-customer-history.md
 ```
 
-Fill in: problem, requirements, **non-goals**, design, edge cases, acceptance criteria.
+Fill in the four canonical H2 sections: **Overview**, **Requirements** (must have / nice to have / non-goals), **Design**, **Tasks**.
 
 Status starts as `draft`. Move to `ready` when you're done writing.
 
 Commit the spec on its own branch:
 ```bash
 git checkout -b docs/spec-042-customer-history
-git add specs/plans/SPEC-042-customer-history.md
+git add specs/active/SPEC-042-customer-history.md
 git commit -m "docs(SPEC-042): add customer history spec"
 git push
 ```
@@ -52,10 +52,11 @@ Implement SPEC-042: Customer History.
 ## Context
 Read these files first:
 1. phoenix-docs/documentation/agents/phoenix-ui.md
-2. phoenix-docs/specs/plans/SPEC-042-customer-history.md
+2. phoenix-docs/specs/active/SPEC-042-customer-history.md
 
 ## Rules
-- Follow TDD: write a failing test first
+- Follow the ## Tasks section in order; check items off as you go
+- If test infrastructure exists in this repo, follow TDD
 - Add REQ-ID comments referencing the spec for traceability
 - Implement in small atomic steps — commit-worthy chunks
 - Do not commit or push without asking
@@ -64,19 +65,19 @@ Read these files first:
 
 ---
 
-## Step 4 — The TDD prompt
+## Step 4 — The TDD prompt (when test infrastructure exists)
+
+> The Phoenix Platform doesn't have active test suites yet. **Skip this step for now.** When tests are added to a repo, this is the prompt.
 
 After Claude returns its plan, before you approve:
 
-> *"This plan looks great! Please update the plan to follow our standard TDD best practices."*
+> *"This plan looks great! Please update the ## Tasks section to follow TDD best practices."*
 
 Claude reorders the work into **RED → GREEN → REFACTOR** cycles:
 
 - **RED** — write a failing test
 - **GREEN** — minimal code to make it pass
 - **REFACTOR** — clean up while tests stay green
-
-Tests get written *alongside* code, not after. This catches misunderstandings early.
 
 ---
 
@@ -122,8 +123,8 @@ status: complete
 ```
 You: Open a PR for this branch. Title in conventional commits 
      format. Body should summarize the spec, link to 
-     phoenix-docs/specs/plans/SPEC-042-..., and list the 
-     acceptance criteria with check marks.
+     phoenix-docs/specs/active/SPEC-042-..., and list the 
+     ## Tasks items with check marks.
 ```
 
 Claude uses `gh pr create` to do this. PR title example:
