@@ -2,25 +2,27 @@
 
 What a day of vibe coding looks like, start to finish.
 
-----
+---
 
 ## Morning — pick a task
 
 You've got a task in mind. First decision: **does it need a spec?**
 
 ✅ **Yes, write a spec:**
+
 - New features
 - Bug fixes that change behavior
 - Significant changes to existing behavior
 - Architectural decisions (also gets an ADR)
 
 ❌ **No, just do it:**
+
 - Typo fixes
 - Dependency bumps
 - Minor refactoring with no behavior change
 - Adding tests for existing code
 
-----
+---
 
 ## Step 1 — Pull latest, branch up
 
@@ -31,7 +33,7 @@ git pull
 git checkout -b feature/SPEC-042-customer-history
 ```
 
-----
+---
 
 ## Step 2 — Launch Claude in plan mode
 
@@ -41,7 +43,7 @@ claude
 
 Or open the desktop app pointed at the same directory. Toggle to **plan mode** (Shift+Tab).
 
-----
+---
 
 ## Step 3 — Hand Claude its briefing
 
@@ -55,24 +57,24 @@ Read these in order, then confirm you're ready:
 
 Claude reads, confirms. Now you're aligned on the rules and the work.
 
-----
+---
 
 ## Step 4 — Get a plan
 
 ```
-Draft an implementation plan for SPEC-042. Show me which 
-files you'll modify, which tests you'll write, and the 
+Draft an implementation plan for SPEC-042. Show me which
+files you'll modify, which tests you'll write, and the
 order of operations. Do not implement yet.
 ```
 
 You read, push back, refine. When happy:
 
 ```
-This plan looks great! Please update the plan to follow 
+This plan looks great! Please update the plan to follow
 our standard TDD best practices.
 ```
 
-----
+---
 
 ## Step 5 — Implement, one chunk at a time
 
@@ -87,19 +89,19 @@ Drop out of plan mode (Shift+Tab → Default). For each plan step:
 
 Move spec status: `ready` → `in-progress`.
 
-----
+---
 
 ## Step 6 — Push & open PR
 
 ```
-You: Push the branch and open a PR. Title in conventional 
-     commits format. Body with summary, changes list, and 
+You: Push the branch and open a PR. Title in conventional
+     commits format. Body with summary, changes list, and
      spec acceptance criteria as a checklist.
 ```
 
 Move spec status: `in-progress` → `review-pending`.
 
-----
+---
 
 ## Step 7 — Review feedback (if any)
 
@@ -111,7 +113,7 @@ If the reviewer (you, a teammate, or another agent) requests changes:
 - Push again
 - Status: `in-progress` → `review-pending`
 
-----
+---
 
 ## Step 8 — Merge & deploy
 
@@ -120,7 +122,7 @@ If the reviewer (you, a teammate, or another agent) requests changes:
 - Once it's running in production: spec status → `complete`
 - The completed spec stays in `specs/active/` as a permanent record. Phoenix doesn't archive — the YAML status field is the source of truth.
 
-----
+---
 
 ## End of day — quick hygiene
 

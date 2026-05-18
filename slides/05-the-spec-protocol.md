@@ -2,7 +2,7 @@
 
 The Phoenix Platform's name for the spec-first protocol.
 
-> *"Documentation is the **first** artifact of every change, not an afterthought. Specs are written before code, reviewed like code, and archived for reference."*
+> _"Documentation is the **first** artifact of every change, not an afterthought. Specs are written before code, reviewed like code, and archived for reference."_
 > — `phoenix-docs/documentation/development-standards.md`
 
 The single behavior change that separates production code from slop:
@@ -13,7 +13,7 @@ The single behavior change that separates production code from slop:
 Note:
 A spec is a 1-2 page document that answers: what are we building, why, what does "done" look like, and what are the edge cases. It takes 15-30 minutes to write and saves hours of bad implementation.
 
-----
+---
 
 ## The loop
 
@@ -25,7 +25,7 @@ SPEC  →  PLAN MODE  →  IMPLEMENTATION  →  REVIEW  →  PR  →  MERGE  →
 
 Every piece of work that isn't a typo or dependency bump runs through this loop.
 
-----
+---
 
 ## Where specs live
 
@@ -35,16 +35,16 @@ Naming: `SPEC-NNN-short-name.md` where NNN is a 3-digit number you increment man
 
 Templates to copy from `phoenix-docs/templates/`:
 
-| Template | When to use |
-|----------|-------------|
-| `feature-template.md` | New feature, new endpoint, new screen, **or audit** |
-| `bug-template.md` | Something is broken |
-| `adr-template.md` | A permanent architecture decision |
-| `agent-brief-template.md` | Setting up a new repo |
+| Template                  | When to use                                         |
+| ------------------------- | --------------------------------------------------- |
+| `feature-template.md`     | New feature, new endpoint, new screen, **or audit** |
+| `bug-template.md`         | Something is broken                                 |
+| `adr-template.md`         | A permanent architecture decision                   |
+| `agent-brief-template.md` | Setting up a new repo                               |
 
 > ADRs go in `specs/adrs/` and are **never** archived or deleted.
 
-----
+---
 
 ## The canonical spec format
 
@@ -64,53 +64,59 @@ affected_repos: [phoenix]
 # SPEC-NNN — Title
 
 ## Overview
+
 [2-3 sentences: what problem, why now, what happens if we don't]
 
 ## Requirements
+
 ### Must have
+
 ### Nice to have
+
 ### Non-goals
 
 ## Design
+
 [Technical approach: DB changes, endpoints, UI changes,
- cross-repo impact, edge cases]
+cross-repo impact, edge cases]
 
 ## Tasks
+
 - [ ] First atomic task
 - [ ] Second atomic task
 ```
 
 Don't create multi-file spec folders. One spec = one file.
 
-----
+---
 
 ## Spec status lifecycle
 
 Update the `status` field in the frontmatter as work progresses.
 
-| Status | Meaning |
-|--------|---------|
-| `draft` | Being written, not ready for implementation |
-| `ready` | Spec complete, ready to implement |
-| `in-progress` | Currently being implemented |
-| `review-pending` | Code complete, PR awaiting review |
-| `complete` | PR merged **and deployed to production** |
-| `deprecated` | No longer pursuing or superseded |
+| Status           | Meaning                                     |
+| ---------------- | ------------------------------------------- |
+| `draft`          | Being written, not ready for implementation |
+| `ready`          | Spec complete, ready to implement           |
+| `in-progress`    | Currently being implemented                 |
+| `review-pending` | Code complete, PR awaiting review           |
+| `complete`       | PR merged **and deployed to production**    |
+| `deprecated`     | No longer pursuing or superseded            |
 
 > ⚠️ **Critical:** "Complete" means deployed. Not merged. Not "code is done." **Deployed.** Use `review-pending` when the PR is open.
 
-----
+---
 
 ## Letting Claude help write the spec
 
 You don't have to write specs from scratch. Pattern:
 
 ```
-I want to add [rough description] to phoenix-ui. 
-Read phoenix-docs/templates/feature-template.md and 
+I want to add [rough description] to phoenix-ui.
+Read phoenix-docs/templates/feature-template.md and
 phoenix-docs/documentation/agents/phoenix-ui.md.
 
-Ask me 5-8 clarifying questions, then draft a spec 
+Ask me 5-8 clarifying questions, then draft a spec
 to phoenix-docs/specs/active/SPEC-NNN-name.md.
 ```
 

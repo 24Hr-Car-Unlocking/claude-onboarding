@@ -7,9 +7,9 @@ You are becoming the **product owner** of a developer (Claude) — and that role
 The next slides cover everything you need. Nothing more.
 
 Note:
-Skip none of these. Each one will be invoked in the daily workflow. The good news: you're not learning to *write* code, only to *direct* it. That dramatically shrinks the surface area.
+Skip none of these. Each one will be invoked in the daily workflow. The good news: you're not learning to _write_ code, only to _direct_ it. That dramatically shrinks the surface area.
 
-----
+---
 
 ## Skill 1 — The terminal
 
@@ -31,7 +31,7 @@ cd D:/repos/phoenix-workspace   # jump anywhere by absolute path
 Note:
 On Windows, install Git for Windows from git-scm.com. It bundles Git Bash. To open it, right-click any folder in File Explorer and pick "Git Bash Here". That single trick saves you 80% of the typing.
 
-----
+---
 
 ## Skill 2 — Git, the absolute basics
 
@@ -47,26 +47,26 @@ git push                      # upload to GitHub
 git log --oneline -20         # see recent commits
 ```
 
-That is genuinely 90% of what you'll type. Claude will run most of these for you — but you need to *recognize* them when they happen.
+That is genuinely 90% of what you'll type. Claude will run most of these for you — but you need to _recognize_ them when they happen.
 
-----
+---
 
 ## Skill 3 — GitHub
 
 GitHub hosts your repos online. Three concepts to know:
 
-| Term | Meaning |
-|------|---------|
-| **Repository** | A project — code + history |
-| **Branch** | A parallel line of changes that don't affect `main` |
-| **Pull Request (PR)** | A formal proposal to merge a branch into `main` |
+| Term                  | Meaning                                             |
+| --------------------- | --------------------------------------------------- |
+| **Repository**        | A project — code + history                          |
+| **Branch**            | A parallel line of changes that don't affect `main` |
+| **Pull Request (PR)** | A formal proposal to merge a branch into `main`     |
 
 **The golden rule:** code never goes to `main` directly. It goes to a branch → PR → review → squash merge → `main`.
 
 Note:
 Even when you're the only person on the team, treat PRs as the contract. They force a moment of "do I really want to ship this?" Claude will draft the PR title and body for you. You click "merge".
 
-----
+---
 
 ## Skill 4 — Reading a diff
 
@@ -85,11 +85,12 @@ function unlockCar(vin) {
 - Unchanged lines have no marker
 
 When reviewing Claude's work, read every diff. Look for:
+
 - Lines you don't understand → ask Claude to explain
 - Files changed that shouldn't have been → push back
 - Hardcoded secrets, API keys, passwords → **stop immediately**
 
-----
+---
 
 ## Skill 5 — VS Code
 
@@ -105,7 +106,7 @@ Open a repo with `code D:/repos/phoenix-workspace/phoenix` from any terminal.
 
 The integrated terminal (Ctrl+`) is your friend — runs Git Bash and Claude Code right in the editor.
 
-----
+---
 
 ## Skill 6 — Claude Code
 
@@ -116,18 +117,18 @@ You already have both:
 
 **When to use which:**
 
-| Use the desktop app when... | Use the CLI when... |
-|----------------------------|---------------------|
-| You're starting a long session and want a clean window | You're already in VS Code's terminal |
-| You're doing audits / read-only research | You're mid-flow on a feature and want to stay in the IDE |
-| You want to share screenshots easily | You want everything in one tab |
+| Use the desktop app when...                            | Use the CLI when...                                      |
+| ------------------------------------------------------ | -------------------------------------------------------- |
+| You're starting a long session and want a clean window | You're already in VS Code's terminal                     |
+| You're doing audits / read-only research               | You're mid-flow on a feature and want to stay in the IDE |
+| You want to share screenshots easily                   | You want everything in one tab                           |
 
 Both connect to the same Claude. Pick whichever feels right that day.
 
 Note:
 If you're new, default to the desktop app for the first week. The CLI is faster once your muscle memory builds, but the desktop app gives you visual confirmation of every tool call which is reassuring early on.
 
-----
+---
 
 ## Skill 7 — The "working directory" concept
 

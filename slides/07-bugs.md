@@ -2,7 +2,7 @@
 
 Same protocol as features, with one critical twist: **failing test first, fix second.**
 
-----
+---
 
 ## Step 1 — Write the bug spec
 
@@ -22,7 +22,7 @@ The bug template forces you to fill in:
 
 Severity goes in the frontmatter. P0 means production is down. P3 means cosmetic.
 
-----
+---
 
 ## Step 2 — Prompt Claude
 
@@ -35,7 +35,7 @@ Fix SPEC-051: Empty VIN crashes unlock flow.
 2. phoenix-docs/specs/active/SPEC-051-empty-vin-crash.md
 
 ## Rules
-- If test infrastructure exists in this repo: write a failing 
+- If test infrastructure exists in this repo: write a failing
   test that reproduces the bug FIRST, then fix
 - Otherwise: reproduce the bug manually, fix, verify manually
 - Then check for similar patterns elsewhere in the codebase
@@ -43,7 +43,7 @@ Fix SPEC-051: Empty VIN crashes unlock flow.
 - Do not commit or push without asking
 ```
 
-----
+---
 
 ## Step 3 — The bug-fix checklist
 
@@ -55,39 +55,42 @@ The bug template ends with this checklist. Don't skip any item:
 - [ ] **Check for similar patterns elsewhere in codebase**
 - [ ] Update documentation if behavior changed
 
-> The "similar patterns elsewhere" step is the difference between a fix and a *complete* fix. Bugs travel in families.
+> The "similar patterns elsewhere" step is the difference between a fix and a _complete_ fix. Bugs travel in families.
 
 Note:
 If you found a null-check missing in one place, there are usually 2-3 more places with the same gap. Always have Claude grep the codebase for sibling cases after the test passes.
 
-----
+---
 
 ## Step 4 — Branch & commit naming
 
 Branch:
+
 ```bash
 git checkout -b bug/empty-vin-crash
 ```
 
 Or for urgent production fixes:
+
 ```bash
 git checkout -b hotfix/empty-vin-crash
 ```
 
 Commit:
+
 ```
 fix(SPEC-051): handle empty VIN in unlock flow
 ```
 
 PR title: same as commit.
 
-----
+---
 
 ## Step 5 — Root cause section
 
-The bug template has a **Root Cause** section that's empty when you start. Fill it in *during investigation*, before you write the fix:
+The bug template has a **Root Cause** section that's empty when you start. Fill it in _during investigation_, before you write the fix:
 
-> *"What's actually wrong and why?"*
+> _"What's actually wrong and why?"_
 
 This forces you (or Claude) to articulate the underlying problem rather than slap a Band-Aid on a symptom. If the root cause is one sentence and obvious, fine. If it's three paragraphs, you've probably found a real architectural issue worth flagging.
 
